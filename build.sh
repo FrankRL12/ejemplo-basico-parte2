@@ -9,7 +9,7 @@ python manage.py makemigrations
 python manage.py migrate
 
 # Variables de entorno para el superusuario
-SUPERUSER_USERNAME="admin2"
+SUPERUSER_USERNAME="admin3"
 SUPERUSER_EMAIL="fermenger05@gmail.com"
 SUPERUSER_PASSWORD="+t@ckc&11"
 
