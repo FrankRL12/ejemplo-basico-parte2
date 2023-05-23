@@ -1,0 +1,51 @@
+{% extends 'base.html' %} 
+
+
+{% load static %}
+
+{% block content %}
+
+    <main>
+        <div class="pagina-principal">
+			<div class="contenedor">
+				<h3 class="titulo">Noticias Milenio</h3>
+				<p class="descripcion">
+					Narra las aventuras de un grupo de exploradores que hacen uso de un agujero de gusano recientemente descubierto para superar las limitaciones de los viajes espaciales tripulados y vencer las inmensas distancias que tiene un viaje interestelar.
+				</p>
+			</div>
+		</div>
+    </main>
+
+    
+    <section>
+        <div class="titulo-fondo">
+            <h1 class="Titulo1">Noticias Recientes</h1>
+        </div>
+       <div class="container">
+  <div class="row">
+    {% for home in homes %}
+    <div class="col-md-4 p-3">
+      <div class="card">
+        <img class="card-img-top" src="{{home.imagen.url}}" alt="Imagen de noticia">
+        <div class="card-body">
+          <h5 class="card-title">{{home.titulo}}</h5>
+          <p class="card-text">{{home.descripcion}}</p>
+        </div>
+        <div class="card-footer">
+          <small class="text-muted">{{home.autor}}</small>
+          <br>
+          <small class="text-muted">{{home.fecha_publicacion}}</small>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+  </section>
+
+  <section>
+    
+  </section>
+
+  {% endblock content %}
+

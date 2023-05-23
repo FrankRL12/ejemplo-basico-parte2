@@ -1,0 +1,58 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <header>
+		<div class="contenedor">
+			<h2 class="logotipo">NOTICIAS-MILENIO</h2>
+			<nav>
+				<a href="{% url 'inicio' %}">INICIO</a>
+				<a href="{% url 'noticia' %}">NOTICIAS</a>
+			</nav>
+		</div>
+	</header>
+
+    {% block content %}
+
+    {% endblock content %}
+
+    <footer class="mt-4">
+        <div class="container mt-4">
+          <div class="row">
+            <div class="col-sm-6 col-md-4">
+              <h5>Redes Sociales</h5>
+              <ul class="list-unstyled">
+                <li><a href="#">Facebook</a></li>
+                <li><a href="#">Twitter</a></li>
+                <li><a href="#">Instagram</a></li>
+              </ul>
+            </div>
+            <div class="col-sm-6 col-md-4">
+              <h5>Ubicación</h5>
+              <p>Villa Juan Aldama Teapa, Tabasco, Mexico</p>
+              <p>fermenger05@gmail.com</p>
+            </div>
+            <div class="col-md-4">
+              <h5>Desarrollador</h5>
+              <p>Fernando Agustin Mendez Geronimo</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <hr>
+              <p class="text-center">© 2023 Derechos Reservados | NOTICIAS MILENIO</p>
+            </div>
+          </div>
+        </div>
+      </footer>
+      
+</html>    

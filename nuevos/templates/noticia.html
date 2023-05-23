@@ -1,0 +1,55 @@
+{% extends 'base.html' %} 
+
+
+{% load static %}
+
+{% block content %}
+
+    <main>
+        <div class="container mt-5">
+            <div class="row justify-content-center">
+              <div class="col-md-4">
+                <div class="card p-4">
+                  <div class="text-center">
+                    <img src="{% static 'img/github.svg' %}" alt="Profile Image" class="rounded-circle img-fluid mb-3 w-50">
+                    <h4>Fernando Agustin Mendez Geronimo</h4>
+                    <p>Trabajo / Ocupación</p>
+                    <ul class="list-unstyled d-flex justify-content-center">
+                      <li class="mx-2"><a href="#"><img class="redes" src="{% static 'img/email.svg' %}" alt=""></a></li>
+                      <li class="mx-2"><a href="#"><img class="redes" src="{% static 'img/facebook.svg' %}" alt=""></a></li>
+                      <li class="mx-2"><a href="#"><img class="redes" src="{% static 'img/github.svg' %}" alt=""></a></li>
+                      <li class="mx-2"><a href="#"><img class="redes" src="{% static 'img/instagram.svg' %}" alt=""></a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+    </main>
+    <section class="mt-3">
+        <div class="titulo-fondo">
+            <h1 class="Titulo1">Noticas mas relevantes</h1>
+        </div>
+        <div class="container">
+            <div class="row">
+              {% for noticia in noticias %}
+                <div class="col-md-4">
+                  <div class="card">
+                    <img src="{{noticia.imagen.url}}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">{{noticia.titulo}}</h5>
+                      <p class="card-text">{{noticia.descripcion}}</p>
+                    </div>
+                    <div class="card-footer">
+                        <small class="text-muted">{{noticia.autor}}</small>
+                        <br>
+                        <small class="text-muted">{{noticia.fecha_publicacion}}</small>
+                    </div>
+                  </div>
+                </div>
+                {% endfor %}
+              </div>
+        </div>
+      
+    </section>
+    {% endblock content %}

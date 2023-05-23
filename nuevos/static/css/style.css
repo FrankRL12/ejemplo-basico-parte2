@@ -1,0 +1,176 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background: var(--fondo);
+	font-family: 'Open Sans', sans-serif;
+}
+
+.contenedor {
+	width: 90%;
+	margin: auto;
+}
+
+header {
+    background: #7e0000;
+	padding: 20px 0;
+}
+
+header .contenedor {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+header .logotipo {
+	font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+	font-weight: normal;
+	font-size: 40px;
+    color: #FFF;
+}
+
+header nav a {
+	color: #ffffff;
+	text-decoration: none;
+	margin-right: 20px;
+}
+
+header nav a:hover,
+header nav a.activo {
+	color: #8d8d8d;
+}
+
+
+.pagina-principal {
+	font-size: 16px;
+	min-height: 40.62em;
+	color: #fff;
+	background: linear-gradient(rgba(0, 0, 0, .50) 0%, rgba(0,0,0,.50) 100%), url(../img/noticia.jpg);
+	background-position: center center;
+	background-size: cover;
+	margin-bottom: 3.12em;
+	display: flex;
+	align-items: end;
+}
+
+.pagina-principal .contenedor {
+	margin: 0 auto;
+	margin-bottom: 6.25em;
+}
+
+.pagina-principal .titulo {
+	font-weight: 600;
+	font-size: 3.12em;
+	margin-bottom: 0.4em;
+}
+
+.pagina-principal .descripcion {
+	font-weight: normal;
+	font-size: 1em;
+	line-height: 1.75em;
+	max-width: 50%;
+	margin-bottom: 1.25em;
+}
+@media screen and (max-width: 800px) {
+	header .logotipo {
+		margin-bottom: 10px;
+		font-size: 30px;
+	}
+
+	header .contenedor {
+		flex-direction: column;
+		text-align: center;
+	}
+
+	.pagina-principal {
+		font-size: 14px;
+	}
+
+	.pagina-principal .descripcion {
+		max-width: 100%;
+	}
+
+	
+}
+.noticia {
+    border: 1px solid #ff0000;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 20px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .noticia img {
+    display: block;
+    margin: 0 auto 10px;
+    max-width: 100%;
+  }
+  
+  .noticia h2 {
+    font-size: 24px;
+    margin: 0;
+  }
+  
+  .noticia p {
+    font-size: 18px;
+    margin: 10px 0 0;
+  }
+.Titulo1{
+	text-align: center;
+	font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+	color: #fff;
+}
+.titulo-fondo{
+	background: #7e0000;
+}
+.redes{
+	width: 30px;
+}
+.card-title{
+	font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+footer {
+    background-color: #7e0000;
+    color: #ffffff;
+    padding: 20px 0;
+  }
+  
+  footer h5 {
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+  
+  footer ul li {
+    list-style: none;
+    margin-bottom: 10px;
+  }
+  
+  footer ul li a {
+    color: #ffffff;
+  }
+  
+  footer p {
+    margin-bottom: 20px;
+  }
+  
+  footer hr {
+    border-top: 1px solid #6c757d;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  
+  footer p.text-center {
+    font-size: 14px;
+  }
+  
+  @media (max-width: 767px) {
+    footer h5 {
+      margin-top: 30px;
+    }
+  }
