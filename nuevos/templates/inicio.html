@@ -1,51 +1,118 @@
-{% extends 'base.html' %} 
+{% extends 'base.html' %} {% load static %} {% block content %}
 
+<main>
+  <div class="pagina-principal">
+    <div class="contenedor">
+      <h3 class="titulo">Noticias Milenio</h3>
+      <p class="descripcion">
+        Narra las aventuras de un grupo de exploradores que hacen uso de un
+        agujero de gusano recientemente descubierto para superar las
+        limitaciones de los viajes espaciales tripulados y vencer las inmensas
+        distancias que tiene un viaje interestelar.
+      </p>
+    </div>
+  </div>
+</main>
 
-{% load static %}
-
-{% block content %}
-
-    <main>
-        <div class="pagina-principal">
-			<div class="contenedor">
-				<h3 class="titulo">Noticias Milenio</h3>
-				<p class="descripcion">
-					Narra las aventuras de un grupo de exploradores que hacen uso de un agujero de gusano recientemente descubierto para superar las limitaciones de los viajes espaciales tripulados y vencer las inmensas distancias que tiene un viaje interestelar.
-				</p>
-			</div>
-		</div>
-    </main>
-
-    
-    <section>
-        <div class="titulo-fondo">
-            <h1 class="Titulo1">Noticias Recientes</h1>
-        </div>
-       <div class="container">
-  <div class="row">
-    {% for home in homes %}
-    <div class="col-md-4 p-3">
-      <div class="card">
-        <img class="card-img-top" src="{{home.imagen.url}}" alt="Imagen de noticia">
-        <div class="card-body">
-          <h5 class="card-title">{{home.titulo}}</h5>
-          <p class="card-text">{{home.descripcion}}</p>
-        </div>
-        <div class="card-footer">
-          <small class="text-muted">{{home.autor}}</small>
-          <br>
-          <small class="text-muted">{{home.fecha_publicacion}}</small>
+<section>
+  <div class="titulo-fondo">
+    <h1 class="Titulo1">Noticias Recientes</h1>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 p-3">
+        <div class="card">
+          <img class="card-img-top" src="{% static 'img/noticia1.jpg' %}" alt="Imagen de noticia"/>
+          <div class="card-body">
+            <h5 class="card-title">Noticia -1</h5>
+            <p class="card-text">Descripcion de la noticia-1</p>
+          </div>
+          <div class="card-footer">
+            <small class="text-muted"></small>
+            <br />
+            <small class="text-muted"></small>
+          </div>
         </div>
       </div>
+ 
+      <div class="col-md-4 p-3">
+        <div class="card">
+          <img class="card-img-top" src="{% static 'img/noticia2.jpg' %}" alt="Imagen de noticia"/>
+          <div class="card-body">
+            <h5 class="card-title">Noticia -2</h5>
+            <p class="card-text">Descripcion de la noticia-2</p>
+          </div>
+          <div class="card-footer">
+            <small class="text-muted"></small>
+            <br />
+            <small class="text-muted"></small>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="col-md-4 p-3">
+        <div class="card">
+          <img class="card-img-top" src="{% static 'img/noticia3.jpg' %}" alt="Imagen de noticia"/>
+          <div class="card-body">
+            <h5 class="card-title">Noticia -3</h5>
+            <p class="card-text">Descripcion de la noticia-3</p>
+          </div>
+          <div class="card-footer">
+            <small class="text-muted"></small>
+            <br />
+            <small class="text-muted"></small>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 p-3">
+        <div class="card">
+          <img class="card-img-top" src="{% static 'img/noticia4.jpg' %}" alt="Imagen de noticia"/>
+          <div class="card-body">
+            <h5 class="card-title">Noticia -4</h5>
+            <p class="card-text">Descripcion de la noticia-4</p>
+          </div>
+          <div class="card-footer">
+            <small class="text-muted"></small>
+            <br />
+            <small class="text-muted"></small>
+          </div>
+        </div>
+      </div>
+
     </div>
-    {% endfor %}
   </div>
-</div>
-  </section>
 
-  <section>
-    
-  </section>
+  <div class="titulo-fondo">
+    <h1 class="Titulo1">Noticias Recientes</h1>
+  </div>
+  <div class="container">
+    <div class="row">
+      {% for home in homes %}
+      <div class="col-md-4 p-3">
+        <div class="card">
+          <img
+            class="card-img-top"
+            src="{{home.imagen.url}}"
+            alt="Imagen de noticia"
+          />
+          <div class="card-body">
+            <h5 class="card-title">{{home.titulo}}</h5>
+            <p class="card-text">{{home.descripcion}}</p>
+          </div>
+          <div class="card-footer">
+            <small class="text-muted">{{home.autor}}</small>
+            <br />
+            <small class="text-muted">{{home.fecha_publicacion}}</small>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
 
-  {% endblock content %}
+<section></section>
 
+{% endblock content %}

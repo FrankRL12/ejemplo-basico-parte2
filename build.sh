@@ -9,8 +9,8 @@ python manage.py makemigrations
 python manage.py migrate
 
 # Variables de entorno para el superusuario
-SUPERUSER_USERNAME="admin4"
+SUPERUSER_USERNAME="fernando"
 SUPERUSER_EMAIL="fermenger05@gmail.com"
-SUPERUSER_PASSWORD="+t@ckc&11"
+SUPERUSER_PASSWORD="123456"
 
 echo "from django.contrib.auth import get_user_model; User = get_user_model(); User.objects.create_superuser('$SUPERUSER_USERNAME', '$SUPERUSER_EMAIL', '$SUPERUSER_PASSWORD')" | python manage.py shell
